@@ -6,8 +6,7 @@ import random
 import math
 import json
 
-# تم استخدام حساب وهمي مؤقت فقط لتوليد رمز وصول بغرض الاختبار وتشغيل الكود
-RAW_TOKEN = "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"
+RAW_TOKEN = st.secrets["RAW_TOKEN"]
 HF_TOKEN = RAW_TOKEN.strip()
 client = InferenceClient(api_key=HF_TOKEN)
 
@@ -475,5 +474,6 @@ if generate_btn:
             except Exception as e:
 
                 st.error(f"{e} :حدث خطأ غير متوقع")
+
 
 
