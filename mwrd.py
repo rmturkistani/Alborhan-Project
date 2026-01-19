@@ -289,7 +289,7 @@ with st.container():
     col1, col2 = st.columns(2)
     with col1:
         gender = st.selectbox("الجنس", ["ذكر", "أنثى"])
-        age = st.number_input("العمر", 5, 100, 25)
+        age = st.number_input("العمر", 5, 100, 20)
         city = st.selectbox("المدينة", ["الرياض", "جدة", "مكة", "المدينة", "الدمام"])
         # محاكاة مدخلات موقع المستخدم (الحي) لحساب المسافة
         neighborhood = st.text_input("الحي", placeholder="مثال: الزايدي")
@@ -474,6 +474,7 @@ if generate_btn:
             except Exception as e:
 
                 st.error(f"{e} :حدث خطأ غير متوقع")
+
 
 
 
