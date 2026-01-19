@@ -331,7 +331,7 @@ if generate_btn:
             **Content Rules:**
             - "الأسبوع": Week 1 to Week 12.
             - "السورة والآيات": Specific range based on {surahs} AND level {level}.
-            - "رقم الصفحة": Must align with goal ({goal}) and commitment ({commitment}) and {surahs}.
+            - Must align with goal ({goal}) and commitment ({commitment}) and {surahs}.
             - The weekly workload MUST be realistically achievable for a human learner of the given age and level. For young learners (children), prioritize short surahs or very small ayah ranges.
             
             Do not include any introduction or conclusion text. Only the two tables.
@@ -473,6 +473,7 @@ if generate_btn:
             except Exception as e:
 
                 st.error(f"{e} :حدث خطأ غير متوقع")
+
 
 
 
