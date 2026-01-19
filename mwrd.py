@@ -6,8 +6,8 @@ import random
 import math
 import json
 
-RAW_TOKEN = st.secrets["RAW_TOKEN"]
-HF_TOKEN = RAW_TOKEN.strip()
+# تم استخدام حساب وهمي مؤقت فقط لتوليد رمز وصول بغرض الاختبار وتشغيل الكود
+HF_TOKEN = "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"
 client = InferenceClient(api_key=HF_TOKEN)
 
 # إعداد الصفحة (العنوان الذي يظهر في المتصفح)
@@ -472,4 +472,5 @@ if generate_btn:
             except json.JSONDecodeError:
                 st.error(".حاول مرة أخرى .(JSON Format Error) خطأ في معالجة استجابة الذكاء الاصطناعي")
             except Exception as e:
+
                 st.error(f"{e} :حدث خطأ غير متوقع")
