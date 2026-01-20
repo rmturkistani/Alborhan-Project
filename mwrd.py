@@ -326,7 +326,7 @@ if generate_btn:
             | الأسبوع | السورة والآيات | 
             5. **CRITICAL DATA ACCURACY**:
             - {surahs} table is the **single authoritative source** for surahs order and ayahs ranges.
-            - You MUST strictly follow the exact Quranic surahs order and use the precise ayahs start–end ranges exactly as provided in the table.
+            - You MUST strictly follow the exact Quranic surahs order and use the precise ayahs start–end ranges exactly as provided in the table. Example: If Surah Al-Mulk has 30 Ayahs, you CANNOT write "Al-Mulk 1-35". The max is 30.
             - It is strictly forbidden to invent, modify, extend, reduce, or combine ayahs in any way not explicitly allowed by the table.
             - Any error in surahs order or ayahs ranges is considered a **critical failure** and renders the output invalid.
     
@@ -475,6 +475,7 @@ if generate_btn:
             except Exception as e:
 
                 st.error(f"{e} :حدث خطأ غير متوقع")
+
 
 
 
