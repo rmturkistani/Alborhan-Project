@@ -1,3 +1,5 @@
+# razan.m.alturkistany@gmail.com
+
 import streamlit as st
 from huggingface_hub import InferenceClient
 import pandas as pd
@@ -473,6 +475,7 @@ if generate_btn:
             except Exception as e:
 
                 st.error(f"{e} :حدث خطأ غير متوقع")
+
 
 
 
