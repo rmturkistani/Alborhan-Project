@@ -292,7 +292,7 @@ with st.container():
         age = st.number_input("العمر", 5, 100, 20)
         city = st.selectbox("المدينة", ["الرياض", "جدة", "مكة", "المدينة", "الدمام"])
         # محاكاة مدخلات موقع المستخدم (الحي) لحساب المسافة
-        neighborhood = st.text_input("الحي", placeholder="مثال: الزايدي")
+        neighborhood = st.text_input("الحي", placeholder="مثال: النرجس")
         mode = st.radio("نوع التعليم", ["حضوري", "عن بعد"], horizontal=True)
 
     with col2:
@@ -473,6 +473,7 @@ if generate_btn:
             except Exception as e:
 
                 st.error(f"{e} :حدث خطأ غير متوقع")
+
 
 
 
