@@ -328,13 +328,12 @@ if generate_btn:
             - {surahs} table is the **single authoritative source** for surahs order and ayahs ranges.
             - You MUST strictly follow the exact Quranic surahs order and use the precise ayahs start–end ranges exactly as provided in the table. After defining start-end for each week you must look at {surahs} table to check if you have reached the end ayah limit of the current surah. If that limit has been reached, you should then proceed to the next surah.
             - It is strictly forbidden to invent, modify, extend, reduce, or combine ayahs in any way not explicitly allowed by the table.
-            - Any error in surahs order or ayahs ranges is considered a **critical failure** and renders the output invalid.
     
             **Content Rules:**
             - "الأسبوع": Week 1 to Week 12.
             - "السورة والآيات": Specific range based on {surahs} AND level {level}.
             - Must align with goal ({goal}) and commitment ({commitment}) and {surahs}.
-            - The weekly workload MUST be realistically achievable for a human learner of the given age and level. For young learners (children), prioritize short surahs or very small ayah ranges.
+            - The weekly workload MUST be realistically achievable for a human learner of the given age and level. For beginners or young learners (children), prioritize short surahs or very small ayah ranges.
             
             Do not include any introduction or conclusion text. Only the two tables.
             """
@@ -475,6 +474,7 @@ if generate_btn:
             except Exception as e:
 
                 st.error(f"{e} :حدث خطأ غير متوقع")
+
 
 
 
