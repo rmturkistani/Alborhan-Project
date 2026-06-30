@@ -1,7 +1,6 @@
 # razan.m.alturkistany@gmail.com
 
 import streamlit as st
-pip install -U huggingface_hub
 from huggingface_hub import InferenceClient
 import pandas as pd
 import io
