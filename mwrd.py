@@ -1,6 +1,7 @@
 # razan.m.alturkistany@gmail.com
 
 import streamlit as st
+pip install -U huggingface_hub
 from huggingface_hub import InferenceClient
 import pandas as pd
 import io
@@ -10,10 +11,7 @@ import json
 
 RAW_TOKEN = st.secrets["RAW_TOKEN"]
 HF_TOKEN = RAW_TOKEN.strip()
-client = InferenceClient(
-    api_key=HF_TOKEN,
-    provider="hf-inference"
-)
+client = InferenceClient(api_key=HF_TOKEN,)
 
 # إعداد الصفحة (العنوان الذي يظهر في المتصفح)
 st.set_page_config(page_title="مَورِد | خدمة المساعد الذكي", layout="wide")
