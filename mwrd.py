@@ -340,7 +340,7 @@ if generate_btn:
             try:
                 response = client.chat.completions.create(
                     # model="Qwen/Qwen2.5-72B-Instruct",
-                    model="Qwen/Qwen2.5-14B-Instruct",
+                    model="Qwen/Qwen2.5-7B-Instruct",
                     messages=[{"role": "user", "content": prompt}],
                     max_tokens=1500, temperature=0.2
                 )
@@ -430,7 +430,7 @@ if generate_btn:
             try:
                 response = client.chat.completions.create(
                     # model="Qwen/Qwen2.5-7B-Instruct",
-                    model="Qwen/Qwen2.5-14B-Instruct",
+                    model="Qwen/Qwen2.5-7B-Instruct",
                     messages=[{"role": "user", "content": rec_prompt}],
                     max_tokens=2000, temperature=0.1
                 )
