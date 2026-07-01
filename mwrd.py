@@ -2,7 +2,6 @@
 
 import streamlit as st
 from huggingface_hub import InferenceClient
-from openai import OpenAI
 import pandas as pd
 import io
 import random
@@ -11,7 +10,7 @@ import json
 
 RAW_TOKEN = st.secrets["RAW_TOKEN"]
 HF_TOKEN = RAW_TOKEN.strip()
-client = InferenceClient(api_key=HF_TOKEN, base_url="https://api.groq.com/openai/v1")
+client = InferenceClient(api_key=HF_TOKEN)
 
 # إعداد الصفحة (العنوان الذي يظهر في المتصفح)
 st.set_page_config(page_title="مَورِد | خدمة المساعد الذكي", layout="wide")
@@ -341,7 +340,7 @@ if generate_btn:
             try:
                 response = client.chat.completions.create(
                     # model="Qwen/Qwen2.5-72B-Instruct",
-                    model="qwen/qwen3-32b",
+                    model="Qwen/Qwen2.5-14B-Instruct",
                     messages=[{"role": "user", "content": prompt}],
                     max_tokens=1500, temperature=0.2
                 )
@@ -431,7 +430,7 @@ if generate_btn:
             try:
                 response = client.chat.completions.create(
                     # model="Qwen/Qwen2.5-7B-Instruct",
-                    model="qwen/qwen3-32b",
+                    model="Qwen/Qwen2.5-14B-Instruct",
                     messages=[{"role": "user", "content": rec_prompt}],
                     max_tokens=2000, temperature=0.1
                 )
